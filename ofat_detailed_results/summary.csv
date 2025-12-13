@@ -1,0 +1,16 @@
+parameter,value,best_val_accuracy,test_accuracy_macro_f1
+learning_rate,0.01,0.2495,0.1824
+learning_rate,0.001,0.3363,0.2456
+learning_rate,0.0005,0.4195,0.394
+learning_rate,0.0003,0.4864,0.4691
+learning_rate,0.0001,0.4394,0.4002
+learning_rate,5e-05,0.4521,0.4297
+learning_rate,1e-06,0.2116,0.1587
+batch_size,16,0.443,0.3754
+batch_size,32,0.4177,0.3031
+batch_size,64,0.4412,0.3515
+weight_decay,0.0,0.4973,0.4512
+weight_decay,1e-05,0.4503,0.4526
+weight_decay,0.0001,0.3906,0.4141
+weight_decay,0.001,0.3996,0.31
+weight_decay,0.01,0.4159,0.4188

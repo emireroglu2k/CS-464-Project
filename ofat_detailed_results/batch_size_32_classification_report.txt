@@ -1,0 +1,16 @@
+                    precision    recall  f1-score   support
+
+        Abyssinian       0.62      0.14      0.23        56
+American Shorthair       0.27      0.43      0.33        56
+            Birman       0.27      0.05      0.09        56
+ British Shorthair       0.78      0.12      0.22        56
+      Egyptian Mau       0.58      0.76      0.66        54
+           Persian       0.55      0.29      0.38        56
+           Ragdoll       0.38      0.38      0.38        55
+           Siamese       0.24      0.91      0.37        55
+            Sphynx       0.32      0.37      0.34        52
+  Toyger tiger cat       0.50      0.02      0.04        55
+
+          accuracy                           0.34       551
+         macro avg       0.45      0.35      0.30       551
+      weighted avg       0.45      0.34      0.30       551

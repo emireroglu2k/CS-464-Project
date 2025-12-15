@@ -1,0 +1,115 @@
+================================================================================================================================================================
+MASTER EXPERIMENT SUMMARY | 2025-12-14T17:02:02Z
+================================================================================================================================================================
+Experiment      | Trees | Depth   | Feat      | Val Acc   | Test Acc  | Test F1   | Time(s)
+--------------------------------------------------------------------------------------------------------------
+baseline        | 100   | None    | sqrt      | 0.7920    | 0.8131    | 0.8054    | 4.4
+trees_10        | 10    | None    | sqrt      | 0.7432    | 0.7423    | 0.7353    | 0.6
+trees_50        | 50    | None    | sqrt      | 0.7758    | 0.7985    | 0.7895    | 2.2
+trees_200       | 200   | None    | sqrt      | 0.8083    | 0.8203    | 0.8117    | 8.7
+trees_500       | 500   | None    | sqrt      | 0.8282    | 0.8240    | 0.8157    | 20.8
+trees_1000      | 1000  | None    | sqrt      | 0.8246    | 0.8185    | 0.8104    | 40.9
+depth_3         | 100   | 3       | sqrt      | 0.7179    | 0.7060    | 0.6748    | 1.2
+depth_5         | 100   | 5       | sqrt      | 0.7667    | 0.7623    | 0.7390    | 2.1
+depth_10        | 100   | 10      | sqrt      | 0.7830    | 0.8004    | 0.7901    | 3.6
+depth_20        | 100   | 20      | sqrt      | 0.8029    | 0.8149    | 0.8054    | 4.6
+depth_unlim     | 100   | None    | sqrt      | 0.7920    | 0.8131    | 0.8054    | 4.8
+feat_sqrt       | 100   | None    | sqrt      | 0.7920    | 0.8131    | 0.8054    | 4.7
+feat_log2       | 100   | None    | log2      | 0.7848    | 0.7804    | 0.7692    | 1.3
+feat_0.5        | 100   | None    | 0.5       | 0.8336    | 0.8240    | 0.8164    | 108.4
+--------------------------------------------------------------------------------------------------------------
+
+CHAMPION MODEL RESULTS
+------------------------------------------------------------
+Accuracy: 0.8167
+F1 Score: 0.8087
+Training Time: 23.5s
+Tuned Parameters:
+  n_estimators: 500
+  max_depth: 20
+  max_features: sqrt
+
+=== CLASSIFICATION REPORT ===
+                    precision    recall  f1-score   support
+
+        Abyssinian     0.8727    0.8571    0.8649        56
+American Shorthair     0.7778    0.3750    0.5060        56
+            Birman     0.7755    0.6786    0.7238        56
+ British Shorthair     0.8679    0.8214    0.8440        56
+      Egyptian Mau     0.7846    0.9444    0.8571        54
+           Persian     0.9474    0.9643    0.9558        56
+           Ragdoll     0.8269    0.7818    0.8037        55
+           Siamese     0.8060    0.9818    0.8852        55
+            Sphynx     0.9623    0.9808    0.9714        52
+  Toyger tiger cat     0.6027    0.8000    0.6875        55
+
+          accuracy                         0.8167       551
+         macro avg     0.8224    0.8185    0.8100       551
+      weighted avg     0.8219    0.8167    0.8087       551
+
+=== CONFUSION ANALYSIS ===
+================================================================================
+CONFUSION ANALYSIS (Top confusions per breed)
+================================================================================
+
+Abyssinian:
+  Correct: 48/56 (85.71%)
+  Most confused with:
+    → Egyptian Mau: 6 times (10.71%)
+    → Sphynx: 1 times (1.79%)
+    → Toyger tiger cat: 1 times (1.79%)
+
+American Shorthair:
+  Correct: 21/56 (37.50%)
+  Most confused with:
+    → Toyger tiger cat: 24 times (42.86%)
+    → British Shorthair: 5 times (8.93%)
+    → Abyssinian: 3 times (5.36%)
+
+Birman:
+  Correct: 38/56 (67.86%)
+  Most confused with:
+    → Siamese: 13 times (23.21%)
+    → Ragdoll: 4 times (7.14%)
+    → Abyssinian: 1 times (1.79%)
+
+British Shorthair:
+  Correct: 46/56 (82.14%)
+  Most confused with:
+    → Ragdoll: 3 times (5.36%)
+    → Persian: 2 times (3.57%)
+    → Abyssinian: 1 times (1.79%)
+
+Egyptian Mau:
+  Correct: 51/54 (94.44%)
+  Most confused with:
+    → Toyger tiger cat: 3 times (5.56%)
+
+Persian:
+  Correct: 54/56 (96.43%)
+  Most confused with:
+    → Ragdoll: 2 times (3.57%)
+
+Ragdoll:
+  Correct: 43/55 (78.18%)
+  Most confused with:
+    → Birman: 10 times (18.18%)
+    → British Shorthair: 1 times (1.82%)
+    → Persian: 1 times (1.82%)
+
+Siamese:
+  Correct: 54/55 (98.18%)
+  Most confused with:
+    → British Shorthair: 1 times (1.82%)
+
+Sphynx:
+  Correct: 51/52 (98.08%)
+  Most confused with:
+    → Egyptian Mau: 1 times (1.92%)
+
+Toyger tiger cat:
+  Correct: 44/55 (80.00%)
+  Most confused with:
+    → American Shorthair: 6 times (10.91%)
+    → Egyptian Mau: 3 times (5.45%)
+    → Abyssinian: 2 times (3.64%)

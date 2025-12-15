@@ -1,0 +1,124 @@
+==============================================================================================================
+MASTER EXPERIMENT SUMMARY - MODEL 3 (Face-Cropped Dataset) | 2025-12-14T19:23:39Z
+==============================================================================================================
+Experiment      | Trees | Depth   | Feat      | Val Acc   | Test Acc  | Test F1   | Time(s)
+--------------------------------------------------------------------------------------------------------------
+baseline        | 100   | None    | sqrt      | 0.8434    | 0.8235    | 0.8192    | 0.6
+trees_10        | 10    | None    | sqrt      | 0.7265    | 0.7101    | 0.7022    | 0.1
+trees_50        | 50    | None    | sqrt      | 0.8205    | 0.7773    | 0.7723    | 0.3
+trees_200       | 200   | None    | sqrt      | 0.8455    | 0.7941    | 0.7915    | 1.1
+trees_500       | 500   | None    | sqrt      | 0.8497    | 0.7941    | 0.7902    | 2.6
+trees_1000      | 1000  | None    | sqrt      | 0.8518    | 0.7941    | 0.7900    | 5.0
+depth_3         | 100   | 3       | sqrt      | 0.7495    | 0.6891    | 0.6632    | 0.4
+depth_5         | 100   | 5       | sqrt      | 0.7891    | 0.7563    | 0.7429    | 0.5
+depth_10        | 100   | 10      | sqrt      | 0.8413    | 0.7857    | 0.7794    | 0.5
+depth_20        | 100   | 20      | sqrt      | 0.8392    | 0.8193    | 0.8147    | 0.5
+depth_unlim     | 100   | None    | sqrt      | 0.8434    | 0.8235    | 0.8192    | 0.5
+feat_sqrt       | 100   | None    | sqrt      | 0.8434    | 0.8235    | 0.8192    | 0.7
+feat_log2       | 100   | None    | log2      | 0.8205    | 0.7479    | 0.7406    | 0.4
+feat_0.5        | 100   | None    | 0.5       | 0.8288    | 0.7899    | 0.7862    | 8.0
+--------------------------------------------------------------------------------------------------------------
+
+CHAMPION MODEL RESULTS
+------------------------------------------------------------
+Accuracy: 0.7941
+F1 Score: 0.7915
+Training Time: 1.1s
+Tuned Parameters:
+  n_estimators: 200
+  max_depth: None
+  max_features: sqrt
+
+=== CLASSIFICATION REPORT ===
+                   precision    recall  f1-score   support
+
+       Abyssinian     0.7647    0.5652    0.6500        23
+           Bengal     0.5714    0.5714    0.5714        21
+           Birman     0.7407    0.7692    0.7547        26
+           Bombay     0.9565    1.0000    0.9778        22
+British_Shorthair     0.6923    0.8182    0.7500        11
+     Egyptian_Mau     0.7333    0.6875    0.7097        16
+       Maine_Coon     0.7895    0.8333    0.8108        18
+          Persian     0.9545    1.0000    0.9767        21
+          Ragdoll     0.6842    0.7222    0.7027        18
+     Russian_Blue     0.8800    0.8148    0.8462        27
+          Siamese     0.8889    0.8000    0.8421        20
+           Sphynx     0.7895    1.0000    0.8824        15
+
+         accuracy                         0.7941       238
+        macro avg     0.7871    0.7985    0.7895       238
+     weighted avg     0.7949    0.7941    0.7915       238
+
+=== CONFUSION ANALYSIS ===
+================================================================================
+CONFUSION ANALYSIS (Top confusions per breed)
+================================================================================
+
+Abyssinian:
+  Correct: 13/23 (56.52%)
+  Most confused with:
+    → Bengal: 7 times (30.43%)
+    → Egyptian_Mau: 2 times (8.70%)
+    → Sphynx: 1 times (4.35%)
+
+Bengal:
+  Correct: 12/21 (57.14%)
+  Most confused with:
+    → Abyssinian: 4 times (19.05%)
+    → Maine_Coon: 2 times (9.52%)
+    → Sphynx: 2 times (9.52%)
+
+Birman:
+  Correct: 20/26 (76.92%)
+  Most confused with:
+    → Ragdoll: 3 times (11.54%)
+    → Siamese: 2 times (7.69%)
+    → Russian_Blue: 1 times (3.85%)
+
+Bombay:
+  Correct: 22/22 (100.00%)
+  No confusions (100% accurate)
+
+British_Shorthair:
+  Correct: 9/11 (81.82%)
+  Most confused with:
+    → Russian_Blue: 2 times (18.18%)
+
+Egyptian_Mau:
+  Correct: 11/16 (68.75%)
+  Most confused with:
+    → Bengal: 2 times (12.50%)
+    → British_Shorthair: 1 times (6.25%)
+    → Maine_Coon: 1 times (6.25%)
+
+Maine_Coon:
+  Correct: 15/18 (83.33%)
+  Most confused with:
+    → Ragdoll: 3 times (16.67%)
+
+Persian:
+  Correct: 21/21 (100.00%)
+  No confusions (100% accurate)
+
+Ragdoll:
+  Correct: 13/18 (72.22%)
+  Most confused with:
+    → Birman: 3 times (16.67%)
+    → Maine_Coon: 1 times (5.56%)
+    → Persian: 1 times (5.56%)
+
+Russian_Blue:
+  Correct: 22/27 (81.48%)
+  Most confused with:
+    → British_Shorthair: 3 times (11.11%)
+    → Bombay: 1 times (3.70%)
+    → Egyptian_Mau: 1 times (3.70%)
+
+Siamese:
+  Correct: 16/20 (80.00%)
+  Most confused with:
+    → Birman: 4 times (20.00%)
+
+Sphynx:
+  Correct: 15/15 (100.00%)
+  No confusions (100% accurate)
